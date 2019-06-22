@@ -29,19 +29,24 @@ const NavItem = styled.a `
 `;
 //搜索框
 const NavSearchBox = styled.div`
-    width: 240px;height: 38px;px;margin: 9px 0 0 20px; position: relative;
+    width: 240px;height: 38px;float: left;
+    margin: 9px 0 0 20px; position: relative;
+    transition: width .2s linear;
     .iconfont{
         position: absolute;top: 9px; right: 13px
+    }
+    &.focused{
+        width: 300px;
     }
 `;
 
 const NavSearch = styled.input.attrs({
     placeholder: "搜索"
 })`
-  width: 100%;height: 38px;line-height: 38px;padding:0 40px 0 20px;
+  width: 100%;height: 38px;line-height: 38px;padding:0 40px 0 20px;color: #666;
   border: none;border-radius: 19px;font-size: 14px;background: #eee;
   &::placeholder{
-    color: #999
+    color: #666
   }
 `;
 //按钮容器
